@@ -1,8 +1,10 @@
-import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import BackToTop from "@/components/back-to-top";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -142,8 +144,12 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        {children} 
-        <BackToTop />
+        <LanguageProvider>
+          <Header />
+          {children}
+          <Footer />
+          <BackToTop />
+        </LanguageProvider>
       </body>
     </html>
   );
