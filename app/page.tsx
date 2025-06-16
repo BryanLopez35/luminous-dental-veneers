@@ -282,25 +282,25 @@ export default function VeneersLandingPage() {
     {
       text:
         language === "en"
-          ? "Dr. Smith and his team gave me the smile I've always dreamed of. The veneers look so natural, and the process was much easier than I expected. Highly recommend!"
-          : "El Dr. Smith y su equipo me dieron la sonrisa que siempre había soñado. Las carillas se ven tan naturales, y el proceso fue mucho más fácil de lo que esperaba. ¡Altamente recomendado!",
-      name: "Sarah M.",
+          ? "I am very happy with the treatment they gave me and I recommend everyone to come to this dentist."
+          : "Estoy muy contenta con el tratamiento que me dieron y recomiendo a todos que acudan a este dentista.",
+      name: "Elena Oliva",
       location: "Las Vegas, NV",
     },
     {
       text:
         language === "en"
-          ? "Amazing results! My veneers have completely transformed my confidence. The staff was professional and made me feel comfortable throughout the entire process."
-          : "¡Resultados increíbles! Mis carillas han transformado completamente mi confianza. El personal fue profesional y me hizo sentir cómoda durante todo el proceso.",
-      name: "Michael R.",
+          ? "I like the Dr. Very much and he dental assistant was very patient with me!"
+          : "Me gusta mucho el Dr. y su asistente dental fue muy paciente conmigo!",
+      name: "Julio Ortega.",
       location: "Henderson, NV",
     },
     {
       text:
         language === "en"
-          ? "Best decision I ever made! The payment plan made it affordable, and now I can't stop smiling. Thank you, Luminous Dental LV!"
-          : "¡La mejor decisión que he tomado! El plan de pago lo hizo accesible, y ahora no puedo parar de sonreír. ¡Gracias, Luminous Dental LV!",
-      name: "Jessica L.",
+          ? "This place is amazing! They are very professional and they are very patient! Highly recommend!"
+          : "Este lugar es increíble! Son muy profesionales y son muy pacientes! ¡Lo recomiendo!",
+      name: "Saul Mendoza",
       location: "Las Vegas, NV",
     },
   ]
@@ -312,17 +312,13 @@ export default function VeneersLandingPage() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-amber-400 rounded-full animate-pulse"></div>
+              <img
+                src="img/luminous-logo.webp"
+                alt="Luminous Dental LV Logo"
+                className="w-72 h-16 rounded-xl  object-contain"
+              />
             </div>
-            <div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-                Luminous Dental LV
-              </span>
-              <p className="text-xs text-gray-600">Premium Dental Care</p>
-            </div>
+
           </div>
 
           <div className="flex items-center space-x-4">
@@ -423,7 +419,7 @@ export default function VeneersLandingPage() {
             <div className="relative">
               <div className="relative z-10">
                 <Image
-                  src="/placeholder.svg?height=700&width=600"
+                  src="img/fondo-veneers.png?height=900&width=900"
                   alt="Patient with dental veneers smiling in Las Vegas"
                   width={600}
                   height={700}
@@ -845,13 +841,12 @@ export default function VeneersLandingPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <span className="text-2xl font-bold">Luminous Dental LV</span>
-                  <p className="text-blue-200 text-sm">Premium Dental Care</p>
-                </div>
+                {/* Logo reemplazando el cuadro con sparkles */}
+                <img
+                  src="img/luminous-logo-blanco.webp"
+                  alt="Luminous Dental LV Logo"
+                  className="w-72 h-28 rounded-xl object-contain"
+                />
               </div>
               <p className="text-gray-300 leading-relaxed">
                 {language === "en"
@@ -864,10 +859,9 @@ export default function VeneersLandingPage() {
               <h3 className="text-xl font-bold mb-6 text-blue-200">{t.navigation}</h3>
               <ul className="space-y-3">
                 {[
-                  { label: t.home, href: "/" },
-                  { label: t.about, href: "/about" },
-                  { label: t.veneers, href: "/veneers" },
-                  { label: t.contact, href: "/contact" },
+                  { label: t.home, href: "https://luminousdentallv.com/" },
+                  { label: t.about, href: "https://luminousdentallv.com/about-us/" },
+                  { label: t.contact, href: "https://luminousdentallv.com/contact-us/" },
                 ].map((item, index) => (
                   <li key={index}>
                     <Link
@@ -922,7 +916,7 @@ export default function VeneersLandingPage() {
           <div className="border-t border-gray-700 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-gray-400 text-center md:text-left">
-                &copy; {new Date().getFullYear()} Luminous Dental LV. All rights reserved.
+                &copy; {new Date().getFullYear()} Luminous Dental Las Vegas. All rights reserved.
               </p>
               <div className="flex space-x-6">
                 <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">

@@ -1,9 +1,10 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import BackToTop from "@/components/back-to-top";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Veneers in Las Vegas | Luminous Dental LV",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://luminousdentallv.com"),
+  metadataBase: new URL("https://veneers.luminousdentallv.com"),
   alternates: {
     canonical: "/",
     languages: {
@@ -31,14 +32,14 @@ export const metadata: Metadata = {
     title: "Veneers in Las Vegas | Luminous Dental LV",
     description:
       "Get a radiant smile with custom veneers from top cosmetic dentists in Las Vegas. Book a free consultation at Luminous Dental LV today.",
-    url: "https://luminousdentallv.com",
-    siteName: "Luminous Dental LV",
+    url: "https://veneers.luminousdentallv.com",
+    siteName: "Luminous Dental Las Vegas",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "img/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Luminous Dental LV - Veneers in Las Vegas",
+        alt: "Luminous Dental - Veneers in Las Vegas",
       },
     ],
     locale: "en_US",
@@ -46,10 +47,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Veneers in Las Vegas | Luminous Dental LV",
+    title: "Veneers in Las Vegas | Luminous Dental Las Vegas",
     description:
-      "Get a radiant smile with custom veneers from top cosmetic dentists in Las Vegas. Book a free consultation at Luminous Dental LV today.",
-    images: ["/og-image.jpg"],
+      "Get a radiant smile with custom veneers from top cosmetic dentists in Las Vegas. Book a free consultation at Luminous Dental Las Vegas today.",
+    images: ["img/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -61,21 +62,28 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-    generator: 'v0.dev'
-}
+  }
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://luminousdentallv.com" />
-        <link rel="alternate" hrefLang="en" href="https://luminousdentallv.com/en" />
-        <link rel="alternate" hrefLang="es" href="https://luminousdentallv.com/es" />
+        <link rel="canonical" href="https://veneers.luminousdentallv.com" />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://veneers.luminousdentallv.com/en"
+        />
+        <link
+          rel="alternate"
+          hrefLang="es"
+          href="https://veneers.luminousdentallv.com/es"
+        />
         <meta name="geo.region" content="US-NV" />
         <meta name="geo.placename" content="Las Vegas" />
         <meta name="geo.position" content="36.1699;-115.1398" />
@@ -86,8 +94,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "DentalClinic",
-              name: "Luminous Dental LV",
-              image: "https://luminousdentallv.com/logo.jpg",
+              name: "Luminous Dental Las Vegas",
+              image: "https://veneers.luminousdentallv.com/logo.png",
               description:
                 "Premier dental veneers and cosmetic dentistry in Las Vegas, Nevada. Expert cosmetic dentists providing natural-looking veneer results.",
               address: {
@@ -105,7 +113,7 @@ export default function RootLayout({
               },
               telephone: "(725) 291-5588",
               email: "info@luminousdentallv.com",
-              url: "https://luminousdentallv.com",
+              url: "https://veneers.luminousdentallv.com/",
               openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-16:00"],
               priceRange: "$$",
               aggregateRating: {
@@ -118,12 +126,14 @@ export default function RootLayout({
                 {
                   "@type": "MedicalProcedure",
                   name: "Dental Veneers",
-                  description: "Custom porcelain veneers for smile transformation",
+                  description:
+                    "Custom porcelain veneers for smile transformation",
                 },
                 {
                   "@type": "MedicalProcedure",
                   name: "Cosmetic Dentistry",
-                  description: "Complete smile makeovers and aesthetic dental treatments",
+                  description:
+                    "Complete smile makeovers and aesthetic dental treatments",
                 },
               ],
               inLanguage: ["en", "es"],
@@ -131,7 +141,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children} 
+        <BackToTop />
+      </body>
     </html>
-  )
+  );
 }
