@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     description:
       "Get a radiant smile with custom veneers from top cosmetic dentists in Las Vegas. Book a free consultation at Luminous Dental LV today.",
     url: "https://luminousdentallv.com",
-    siteName: "Luminous Dental LV",
+    siteName: "Luminous Dental Las Vegas",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Luminous Dental LV - Veneers in Las Vegas",
+        alt: "Luminous Dental - Veneers in Las Vegas",
       },
     ],
     locale: "en_US",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Veneers in Las Vegas | Luminous Dental LV",
+    title: "Veneers in Las Vegas | Luminous Dental Las Vegas",
     description:
-      "Get a radiant smile with custom veneers from top cosmetic dentists in Las Vegas. Book a free consultation at Luminous Dental LV today.",
+      "Get a radiant smile with custom veneers from top cosmetic dentists in Las Vegas. Book a free consultation at Luminous Dental Las Vegas today.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -86,8 +86,8 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "DentalClinic",
-              name: "Luminous Dental LV",
-              image: "https://luminousdentallv.com/logo.jpg",
+              name: "Luminous Dental Las Vegas",
+              image: "https://luminousdentallv.com/logo.png",
               description:
                 "Premier dental veneers and cosmetic dentistry in Las Vegas, Nevada. Expert cosmetic dentists providing natural-looking veneer results.",
               address: {
