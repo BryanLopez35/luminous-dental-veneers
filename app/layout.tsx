@@ -1,9 +1,10 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import BackToTop from "@/components/back-to-top";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Veneers in Las Vegas | Luminous Dental LV",
@@ -62,20 +63,28 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <head>
         <link rel="canonical" href="https://luminousdentallv.com" />
-        <link rel="alternate" hrefLang="en" href="https://luminousdentallv.com/en" />
-        <link rel="alternate" hrefLang="es" href="https://luminousdentallv.com/es" />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href="https://luminousdentallv.com/en"
+        />
+        <link
+          rel="alternate"
+          hrefLang="es"
+          href="https://luminousdentallv.com/es"
+        />
         <meta name="geo.region" content="US-NV" />
         <meta name="geo.placename" content="Las Vegas" />
         <meta name="geo.position" content="36.1699;-115.1398" />
@@ -118,12 +127,14 @@ export default function RootLayout({
                 {
                   "@type": "MedicalProcedure",
                   name: "Dental Veneers",
-                  description: "Custom porcelain veneers for smile transformation",
+                  description:
+                    "Custom porcelain veneers for smile transformation",
                 },
                 {
                   "@type": "MedicalProcedure",
                   name: "Cosmetic Dentistry",
-                  description: "Complete smile makeovers and aesthetic dental treatments",
+                  description:
+                    "Complete smile makeovers and aesthetic dental treatments",
                 },
               ],
               inLanguage: ["en", "es"],
@@ -131,7 +142,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children} 
+        <BackToTop />
+      </body>
     </html>
-  )
+  );
 }

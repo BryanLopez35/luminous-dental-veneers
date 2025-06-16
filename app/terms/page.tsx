@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Globe, ArrowLeft, Sparkles } from "lucide-react"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle, ArrowRight, ArrowLeft, Globe } from "lucide-react";
+import Link from "next/link";
 
 const translations = {
   en: {
@@ -133,6 +133,20 @@ const translations = {
         Sunday: Closed`,
       },
     ],
+    // Footer
+    navigation: "Navigation",
+    services: "Services",
+    contactInfo: "Contact Info",
+    home: "Home",
+    about: "About",
+    veneers: "Veneers",
+    contact: "Contact",
+    porcelainVeneers: "Porcelain Veneers",
+    cosmeticDentistry: "Cosmetic Dentistry",
+    smileMakeovers: "Smile Makeovers",
+    teethWhitening: "Teeth Whitening",
+    privacyPolicy: "Privacy Policy",
+    termsOfService: "Terms of Service",
   },
   es: {
     title: "Términos de Servicio",
@@ -260,12 +274,26 @@ const translations = {
         Domingo: Cerrado`,
       },
     ],
+    // Footer
+    navigation: "Navegación",
+    services: "Servicios",
+    contactInfo: "Información de Contacto",
+    home: "Inicio",
+    about: "Acerca de",
+    veneers: "Carillas",
+    contact: "Contacto",
+    porcelainVeneers: "Carillas de Porcelana",
+    cosmeticDentistry: "Odontología Cosmética",
+    smileMakeovers: "Transformaciones de Sonrisa",
+    teethWhitening: "Blanqueamiento Dental",
+    privacyPolicy: "Política de Privacidad",
+    termsOfService: "Términos de Servicio",
   },
-}
+};
 
 export default function TermsOfService() {
-  const [language, setLanguage] = useState<"en" | "es">("en")
-  const t = translations[language]
+  const [language, setLanguage] = useState<"en" | "es">("en");
+  const t = translations[language];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
@@ -274,16 +302,11 @@ export default function TermsOfService() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-amber-400 rounded-full animate-pulse"></div>
-            </div>
-            <div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-                Luminous Dental LV
-              </span>
-              <p className="text-xs text-gray-600">Premium Dental Care</p>
+              <img
+                src="img/luminous-logo.webp"
+                alt="Luminous Dental LV Logo"
+                className="w-72 h-16 rounded-xl  object-contain"
+              />
             </div>
           </Link>
 
@@ -295,10 +318,16 @@ export default function TermsOfService() {
               className="flex items-center space-x-2 hover:bg-blue-50"
             >
               <Globe className="w-4 h-4" />
-              <span className="font-medium">{language === "en" ? "ES" : "EN"}</span>
+              <span className="font-medium">
+                {language === "en" ? "ES" : "EN"}
+              </span>
             </Button>
 
-            <Button asChild variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+            <Button
+              asChild
+              variant="outline"
+              className="border-blue-600 text-blue-600 hover:bg-blue-50"
+            >
               <Link href="/">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 {t.backToHome}
@@ -312,7 +341,9 @@ export default function TermsOfService() {
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t.title}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {t.title}
+            </h1>
             <p className="text-lg text-gray-600">{t.lastUpdated}</p>
           </div>
 
@@ -321,8 +352,12 @@ export default function TermsOfService() {
               <div className="space-y-8">
                 {t.sections.map((section, index) => (
                   <div key={index} className="space-y-4">
-                    <h2 className="text-2xl font-bold text-gray-900 border-b border-blue-200 pb-2">{section.title}</h2>
-                    <div className="text-gray-700 leading-relaxed whitespace-pre-line">{section.content}</div>
+                    <h2 className="text-2xl font-bold text-gray-900 border-b border-blue-200 pb-2">
+                      {section.title}
+                    </h2>
+                    <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                      {section.content}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -344,11 +379,119 @@ export default function TermsOfService() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-300">&copy; {new Date().getFullYear()} Luminous Dental LV. All rights reserved.</p>
+      <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+            <div className="space-y-6">
+              <div className="flex items-center space-x-3">
+                {/* Logo reemplazando el cuadro con sparkles */}
+                <img
+                  src="img/luminous-logo-blanco.webp"
+                  alt="Luminous Dental LV Logo"
+                  className="w-72 h-28 rounded-xl object-contain"
+                />
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                {language === "en"
+                  ? "Las Vegas's premier destination for dental veneers and cosmetic dentistry."
+                  : "El destino principal de Las Vegas para carillas dentales y odontología cosmética."}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-blue-200">
+                {t.navigation}
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  { label: t.home, href: "https://luminousdentallv.com/" },
+                  {
+                    label: t.about,
+                    href: "https://luminousdentallv.com/about-us/",
+                  },
+                  {
+                    label: t.contact,
+                    href: "https://luminousdentallv.com/contact-us/",
+                  },
+                ].map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group"
+                    >
+                      <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-blue-200">
+                {t.services}
+              </h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                  {t.porcelainVeneers}
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                  {t.cosmeticDentistry}
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                  {t.smileMakeovers}
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                  {t.teethWhitening}
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-blue-200">
+                {t.contactInfo}
+              </h3>
+              <div className="space-y-4">
+                <div className="text-gray-300">
+                  <p className="font-semibold">1212 S Maryland Pkwy</p>
+                  <p>Las Vegas, NV 89104</p>
+                </div>
+                <div className="text-gray-300">
+                  <p className="font-semibold">(725) 291-5588</p>
+                  <p>info@luminousdentallv.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-700 mt-12 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-gray-400 text-center md:text-left">
+                &copy; {new Date().getFullYear()} Luminous Dental Las Vegas. All
+                rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                <Link
+                  href="/privacy"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {t.privacyPolicy}
+                </Link>
+                <Link
+                  href="/terms"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {t.termsOfService}
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }

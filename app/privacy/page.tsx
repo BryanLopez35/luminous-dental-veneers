@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Globe, ArrowLeft, Sparkles } from "lucide-react";
+import { CheckCircle, ArrowLeft, ArrowRight, Globe } from "lucide-react";
 import Link from "next/link";
 
 const translations = {
@@ -105,6 +105,20 @@ const translations = {
         Email: info@luminousdentallv.com`,
       },
     ],
+    // Footer
+    navigation: "Navigation",
+    services: "Services",
+    contactInfo: "Contact Info",
+    home: "Home",
+    about: "About",
+    veneers: "Veneers",
+    contact: "Contact",
+    porcelainVeneers: "Porcelain Veneers",
+    cosmeticDentistry: "Cosmetic Dentistry",
+    smileMakeovers: "Smile Makeovers",
+    teethWhitening: "Teeth Whitening",
+    privacyPolicy: "Privacy Policy",
+    termsOfService: "Terms of Service",
   },
   es: {
     title: "Política de Privacidad",
@@ -204,6 +218,20 @@ const translations = {
         Correo: info@luminousdentallv.com`,
       },
     ],
+    // Footer
+    navigation: "Navegación",
+    services: "Servicios",
+    contactInfo: "Información de Contacto",
+    home: "Inicio",
+    about: "Acerca de",
+    veneers: "Carillas",
+    contact: "Contacto",
+    porcelainVeneers: "Carillas de Porcelana",
+    cosmeticDentistry: "Odontología Cosmética",
+    smileMakeovers: "Transformaciones de Sonrisa",
+    teethWhitening: "Blanqueamiento Dental",
+    privacyPolicy: "Política de Privacidad",
+    termsOfService: "Términos de Servicio",
   },
 };
 
@@ -218,16 +246,11 @@ export default function PrivacyPolicy() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-amber-400 rounded-full animate-pulse"></div>
-            </div>
-            <div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-                Luminous Dental LV
-              </span>
-              <p className="text-xs text-gray-600">Premium Dental Care</p>
+              <img
+                src="img/luminous-logo.webp"
+                alt="Luminous Dental LV Logo"
+                className="w-72 h-16 rounded-xl  object-contain"
+              />
             </div>
           </Link>
 
@@ -300,12 +323,118 @@ export default function PrivacyPolicy() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-300">
-            &copy; {new Date().getFullYear()} Luminous Dental LV. All rights
-            reserved.
-          </p>
+      {/* Footer */}
+      <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+            <div className="space-y-6">
+              <div className="flex items-center space-x-3">
+                {/* Logo reemplazando el cuadro con sparkles */}
+                <img
+                  src="img/luminous-logo-blanco.webp"
+                  alt="Luminous Dental LV Logo"
+                  className="w-72 h-28 rounded-xl object-contain"
+                />
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                {language === "en"
+                  ? "Las Vegas's premier destination for dental veneers and cosmetic dentistry."
+                  : "El destino principal de Las Vegas para carillas dentales y odontología cosmética."}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-blue-200">
+                {t.navigation}
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  { label: t.home, href: "https://luminousdentallv.com/" },
+                  {
+                    label: t.about,
+                    href: "https://luminousdentallv.com/about-us/",
+                  },
+                  {
+                    label: t.contact,
+                    href: "https://luminousdentallv.com/contact-us/",
+                  },
+                ].map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group"
+                    >
+                      <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-blue-200">
+                {t.services}
+              </h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                  {t.porcelainVeneers}
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                  {t.cosmeticDentistry}
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                  {t.smileMakeovers}
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                  {t.teethWhitening}
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-blue-200">
+                {t.contactInfo}
+              </h3>
+              <div className="space-y-4">
+                <div className="text-gray-300">
+                  <p className="font-semibold">1212 S Maryland Pkwy</p>
+                  <p>Las Vegas, NV 89104</p>
+                </div>
+                <div className="text-gray-300">
+                  <p className="font-semibold">(725) 291-5588</p>
+                  <p>info@luminousdentallv.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-700 mt-12 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-gray-400 text-center md:text-left">
+                &copy; {new Date().getFullYear()} Luminous Dental Las Vegas. All
+                rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                <Link
+                  href="/privacy"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {t.privacyPolicy}
+                </Link>
+                <Link
+                  href="/terms"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {t.termsOfService}
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
