@@ -1,0 +1,381 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 37 99 235;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 37 99 235;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 158 64% 52%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 158 64% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Dental-themed color palette */
+:root {
+  --dental-blue: #2563eb;
+  --dental-indigo: #4f46e5;
+  --dental-sky: #0ea5e9;
+  --dental-navy: #1e40af;
+  --dental-amber: #f59e0b;
+  --dental-pearl: #f8fafc;
+  --dental-silver: #64748b;
+}
+
+/* Custom animations and effects */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.8);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200px 100%;
+}
+
+/* Gradient text effects */
+.gradient-text-dental {
+  @apply bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent;
+}
+
+/* Custom hover effects */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+}
+
+/* Dental-themed button styles */
+.btn-dental-primary {
+  @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105;
+}
+
+.btn-dental-secondary {
+  @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white shadow-lg hover:shadow-xl transition-all duration-300;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus styles for accessibility */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus {
+  @apply outline-none ring-2 ring-blue-600 ring-offset-2;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .container {
+    @apply px-3;
+  }
+
+  /* Header adjustments */
+  header .container {
+    @apply py-2;
+  }
+
+  /* Hero section mobile fixes */
+  .hero-section {
+    @apply py-12;
+  }
+
+  /* Button mobile fixes */
+  .btn-mobile {
+    @apply px-3 py-2 text-sm;
+  }
+
+  /* Text mobile fixes */
+  h1 {
+    @apply text-2xl leading-tight;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  /* Card mobile fixes */
+  .card-mobile {
+    @apply p-4;
+  }
+
+  /* Form mobile fixes */
+  .form-mobile input,
+  .form-mobile select {
+    @apply h-10 text-sm;
+  }
+
+  /* Grid mobile fixes */
+  .grid-mobile {
+    @apply grid-cols-1 gap-4;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Tablet adjustments */
+  .container {
+    @apply px-4;
+  }
+
+  /* Section padding adjustments */
+  .section-mobile {
+    @apply py-8;
+  }
+
+  /* Typography adjustments */
+  .hero-title {
+    @apply text-3xl md:text-4xl;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl;
+  }
+
+  /* Button adjustments */
+  .btn-responsive {
+    @apply px-4 py-2 text-sm md:px-6 md:py-3 md:text-base;
+  }
+
+  /* Card adjustments */
+  .card-responsive {
+    @apply p-4 md:p-6;
+  }
+
+  /* Grid adjustments */
+  .grid-responsive {
+    @apply grid-cols-1 md:grid-cols-2 gap-4 md:gap-6;
+  }
+}
+
+/* Loading states */
+.loading {
+  @apply animate-pulse bg-gray-200;
+}
+
+/* Custom scrollbar with dental theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-600;
+}
+
+/* Form enhancements */
+.form-input-dental {
+  @apply border-2 border-gray-200 focus:border-blue-600 rounded-lg transition-colors duration-200;
+}
+
+.form-input-dental:focus {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Card hover effects */
+.card-dental {
+  @apply bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2;
+}
+
+/* Badge styles */
+.badge-dental {
+  @apply bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg;
+}
+
+/* Mobile-first responsive utilities */
+.text-responsive {
+  @apply text-sm sm:text-base md:text-lg;
+}
+
+.text-responsive-lg {
+  @apply text-base sm:text-lg md:text-xl lg:text-2xl;
+}
+
+.text-responsive-xl {
+  @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+}
+
+.padding-responsive {
+  @apply p-3 sm:p-4 md:p-6 lg:p-8;
+}
+
+.margin-responsive {
+  @apply m-3 sm:m-4 md:m-6 lg:m-8;
+}
+
+.gap-responsive {
+  @apply gap-3 sm:gap-4 md:gap-6 lg:gap-8;
+}
+
+/* Button responsive utilities */
+.btn-size-responsive {
+  @apply px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base md:px-6 md:py-3 md:text-lg;
+}
+
+.btn-icon-responsive {
+  @apply w-4 h-4 sm:w-5 sm:h-5;
+}
+
+/* Grid responsive utilities */
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .gradient-text-dental {
+    @apply text-blue-800;
+    background: none;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-pulse-glow,
+  .animate-shimmer {
+    animation: none;
+  }
+
+  .hover-lift:hover {
+    transform: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible for better accessibility */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-blue-600 ring-offset-2;
+}
+
+/* Safe area for mobile devices with notches */
+@supports (padding: max(0px)) {
+  .safe-area-inset {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* Landscape mobile optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    @apply py-8;
+  }
+
+  .section-mobile {
+    @apply py-6;
+  }
+}
