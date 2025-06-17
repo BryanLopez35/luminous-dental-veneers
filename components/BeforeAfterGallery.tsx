@@ -21,7 +21,7 @@ const BeforeAfterGallery: React.FC<BeforeAfterGalleryProps> = ({ t, galleryImage
       <div className="text-center mb-16">
         <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 mb-4 px-4 py-2">
           <Sparkles className="w-4 h-4 mr-2" />
-          Transformations
+          {t.beforeAfterBadge}
         </Badge>
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
           {t.galleryTitle}

@@ -1,4 +1,5 @@
 "use client";
+import test from "node:test";
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 const translations = {
@@ -14,6 +15,7 @@ const translations = {
     rating: "4.9/5 Rating",
     happyPatients: "500+ Happy Patients",
     // Why Choose Us
+    whyChooseUsBadge:"Why Choose Us",
     whyChooseTitle: "Why Choose Luminous Dental LV for Your Veneers?",
     whyChooseSubtitle:
       "We're the trusted choice for dental veneers in Las Vegas, combining expertise with personalized care.",
@@ -30,6 +32,7 @@ const translations = {
     locationDesc:
       "Centrally located on Maryland Parkway, easily accessible from anywhere in Las Vegas.",
     // Gallery
+    beforeAfterBadge: "Transformations",
     galleryTitle: "Amazing Veneer Transformations in Las Vegas",
     gallerySubtitle:
       "See the incredible results our patients have achieved with custom dental veneers.",
@@ -37,6 +40,7 @@ const translations = {
     before: "Before",
     after: "After",
     // Testimonials
+    testimonialsBadge: "Testimonials",
     testimonialsTitle: "What Our Las Vegas Patients Say",
     testimonialsSubtitle:
       "Real reviews from real patients who transformed their smiles with veneers.",
@@ -60,6 +64,7 @@ const translations = {
     submittedMessage:
       "Thank you! We'll contact you within 24 hours to schedule your free consultation.",
     // Local SEO
+    visitUsBadge:"Visit Us",
     visitClinic: "Visit Our Veneers Clinic in Las Vegas",
     clinicDescription:
       "Conveniently located in the heart of Las Vegas, our state-of-the-art dental clinic is equipped with the latest technology for veneer placement and cosmetic dentistry.",
@@ -85,6 +90,7 @@ const translations = {
     teethWhitening: "Teeth Whitening",
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service",
+    rightsReserved: "All rights reserved",
     // Features
     features: [
       {
@@ -353,6 +359,7 @@ const translations = {
     rating: "Calificación 4.9/5",
     happyPatients: "500+ Pacientes Felices",
     // Why Choose Us
+    whyChooseUsBadge: "¿Por Qué Elegirnos?",
     whyChooseTitle: "¿Por Qué Elegir Luminous Dental LV para Tus Carillas?",
     whyChooseSubtitle:
       "Somos la opción de confianza para carillas dentales en Las Vegas, combinando experiencia con atención personalizada.",
@@ -369,6 +376,7 @@ const translations = {
     locationDesc:
       "Ubicado centralmente en Maryland Parkway, fácilmente accesible desde cualquier lugar de Las Vegas.",
     // Gallery
+    beforeAfterBadge: "Transformaciones",
     galleryTitle: "Increíbles Transformaciones de Carillas en Las Vegas",
     gallerySubtitle:
       "Ve los resultados increíbles que nuestros pacientes han logrado con carillas dentales personalizadas.",
@@ -376,6 +384,7 @@ const translations = {
     before: "Antes",
     after: "Después",
     // Testimonials
+    testimonialsBadge: "Testimonios",
     testimonialsTitle: "Lo Que Dicen Nuestros Pacientes de Las Vegas",
     testimonialsSubtitle:
       "Reseñas reales de pacientes reales que transformaron sus sonrisas con carillas.",
@@ -399,6 +408,7 @@ const translations = {
     submittedMessage:
       "¡Gracias! Te contactaremos dentro de 24 horas para programar tu consulta gratuita.",
     // Local SEO
+    visitUsBadge: "Visítanos",
     visitClinic: "Visita Nuestra Clínica de Carillas en Las Vegas",
     clinicDescription:
       "Convenientemente ubicada en el corazón de Las Vegas, nuestra clínica dental de última generación está equipada con la tecnología más avanzada para colocación de carillas y odontología cosmética.",
@@ -424,6 +434,7 @@ const translations = {
     teethWhitening: "Blanqueamiento Dental",
     privacyPolicy: "Política de Privacidad",
     termsOfService: "Términos de Servicio",
+    rightsReserved: "Todos los derechos reservados",
     // Features
     features: [
       {

@@ -95,8 +95,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-center md:text-left">
-              &copy; {new Date().getFullYear()} Luminous Dental Las Vegas. All
-              rights reserved.
+              &copy; {new Date().getFullYear()} Luminous Dental Las Vegas. {t.rightsReserved}
             </p>
             <div className="flex space-x-6">
               <Link
