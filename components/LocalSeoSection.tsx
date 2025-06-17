@@ -16,7 +16,7 @@ const LocalSeoSection: React.FC<LocalSeoSectionProps> = ({ t }) => (
           <div>
             <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 mb-4 px-4 py-2">
               <MapPin className="w-4 h-4 mr-2" />
-              Visit Us
+              {t.visitUsBadge}
             </Badge>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               {t.visitClinic}

@@ -20,7 +20,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ t, testimonials }) => (
       <div className="text-center mb-16">
         <Badge className="bg-indigo-100 text-indigo-800 hover:bg-indigo-100 mb-4 px-4 py-2">
           <MessageCircle className="w-4 h-4 mr-2" />
-          Testimonials
+          {t.testimonialsBadge}
         </Badge>
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
           {t.testimonialsTitle}
