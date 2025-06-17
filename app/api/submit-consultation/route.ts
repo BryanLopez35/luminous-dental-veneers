@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 import nodemailer from "nodemailer"
+import { nanoid } from "nanoid"
 
 // Create transporter for Hostinger SMTP
 const transporter = nodemailer.createTransport({
@@ -19,6 +20,7 @@ const renderBusinessEmail = (data: {
   phone: string
   preferredTime: string
   timestamp: string
+  confirmationNumber: string
 }) => {
   return `
     <!DOCTYPE html>
@@ -48,6 +50,7 @@ const renderBusinessEmail = (data: {
               <p style="color: #374151; font-size: 16px; line-height: 24px; margin: 0 0 12px;"><strong>Phone:</strong> <a href="tel:${data.phone}" style="color: #2563eb; text-decoration: underline;">${data.phone}</a></p>
               <p style="color: #374151; font-size: 16px; line-height: 24px; margin: 0 0 12px;"><strong>Preferred Time:</strong> ${data.preferredTime || "Not specified"}</p>
               <p style="color: #374151; font-size: 16px; line-height: 24px; margin: 0 0 12px;"><strong>Submitted:</strong> ${data.timestamp}</p>
+              <p style="color: #374151; font-size: 16px; line-height: 24px; margin: 0 0 12px;"><strong>Confirmation #:</strong> ${data.confirmationNumber}</p>
             </div>
             
             <div style="margin: 32px 0;">
@@ -76,7 +79,7 @@ const renderBusinessEmail = (data: {
 }
 
 // Customer confirmation email HTML template
-const renderCustomerEmail = (data: { name: string; preferredTime: string }) => {
+const renderCustomerEmail = (data: { name: string; preferredTime: string; confirmationNumber: string }) => {
   return `
     <!DOCTYPE html>
     <html>
@@ -98,6 +101,9 @@ const renderCustomerEmail = (data: { name: string; preferredTime: string }) => {
             <p style="color: #6b7280; font-size: 16px; line-height: 24px; margin: 0 0 12px;">
               We've received your request for a free veneer consultation and we're excited to help you achieve your dream smile.
             </p>
+            <div style="background-color: #f3f4f6; border-radius: 8px; padding: 16px; margin: 16px 0;">
+              <p style="color: #1e40af; font-size: 16px; margin: 0 0 8px;"><strong>Confirmation #:</strong> ${data.confirmationNumber}</p>
+            </div>
             
             <div style="background-color: #eff6ff; border: 2px solid #3b82f6; border-radius: 8px; padding: 24px; margin: 24px 0;">
               <p style="color: #1e40af; font-size: 18px; font-weight: 600; margin: 0 0 16px;"><strong>What happens next?</strong></p>
@@ -209,6 +215,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Generar número de confirmación único
+    const confirmationNumber = `LDV-${nanoid(10)}`
+
     const consultationData = {
       name,
       phone: cleanPhone,
@@ -228,11 +237,13 @@ export async function POST(request: NextRequest) {
       phone: cleanPhone,
       preferredTime,
       timestamp: new Date().toLocaleString(),
+      confirmationNumber,
     })
 
     const customerEmailHtml = renderCustomerEmail({
       name,
       preferredTime,
+      confirmationNumber,
     })
 
     // Send email to business
@@ -266,7 +277,7 @@ export async function POST(request: NextRequest) {
         success: true,
         message: "Consultation request submitted successfully! We will contact you within 24 hours.",
         data: {
-          confirmationNumber: `LDV-${Date.now()}`,
+          confirmationNumber,
           estimatedCallTime: "Within 24 hours",
         },
       },

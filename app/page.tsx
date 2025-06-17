@@ -67,7 +67,7 @@ export default function VeneersLandingPage() {
         language === "en"
           ? "I like the Dr. Very much and he dental assistant was very patient with me!"
           : "Me gusta mucho el Dr. y su asistente dental fue muy paciente conmigo!",
-      name: "Julio Ortega.",
+      name: "Julio Ortega",
       location: "Henderson, NV",
     },
     {
@@ -109,6 +109,7 @@ export default function VeneersLandingPage() {
       <LeadCaptureForm
         t={t}
         isSubmitting={isSubmitting}
+        setIsSubmitting={setIsSubmitting}
         isSubmitted={isSubmitted}
         handleFormSubmit={handleFormSubmit}
         setIsSubmitted={setIsSubmitted}
