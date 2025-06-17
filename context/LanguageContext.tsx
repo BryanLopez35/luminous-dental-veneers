@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 const translations = {
   en: {
@@ -196,6 +196,150 @@ const translations = {
     ],
     thankYouCtaTitle: "Ready to Take the Next Step?",
     thankYouCtaSubtitle: "While you wait for our call, explore more about our services or schedule additional consultations",
+    // --- PRIVACY POLICY PAGE TRANSLATIONS ---
+    privacyTitle: "Privacy Policy",
+    privacyLastUpdated: "Last Updated: January 15, 2025",
+    privacySections: [
+      {
+        title: "1. Information We Collect",
+        content: `We collect information you provide directly to us, such as when you:
+        • Fill out our consultation request form
+        • Contact us via phone or email
+        • Visit our clinic
+        • Subscribe to our newsletter
+        
+        The types of information we may collect include:
+        • Name and contact information (email address, phone number)
+        • Dental health information and treatment preferences
+        • Appointment scheduling information
+        • Communication preferences`,
+      },
+      {
+        title: "2. How We Use Your Information",
+        content: `We use the information we collect to:
+        • Schedule and manage your dental appointments
+        • Provide dental care and treatment services
+        • Communicate with you about your treatment
+        • Send appointment reminders and follow-up care instructions
+        • Improve our services and patient experience
+        • Comply with legal and regulatory requirements
+        • Send marketing communications (with your consent)`,
+      },
+      {
+        title: "3. Information Sharing and Disclosure",
+        content: `We do not sell, trade, or otherwise transfer your personal information to third parties except:
+        • With your explicit consent
+        • To dental laboratories for treatment purposes
+        • To insurance companies for billing and claims processing
+        • To comply with legal obligations
+        • To protect our rights and safety
+        • In connection with a business transfer or merger`,
+      },
+      {
+        title: "4. Data Security",
+        content: `We implement appropriate security measures to protect your personal information:
+        • Secure data transmission using SSL encryption
+        • Limited access to personal information on a need-to-know basis
+        • Regular security assessments and updates
+        • Secure storage of physical and electronic records
+        • Staff training on privacy and security protocols`,
+      },
+      {
+        title: "5. Your Rights and Choices",
+        content: `You have the right to:
+        • Access your personal information
+        • Request corrections to inaccurate information
+        • Request deletion of your information (subject to legal requirements)
+        • Opt-out of marketing communications
+        • Request a copy of your dental records
+        • File a complaint with regulatory authorities`,
+      },
+      {
+        title: "6. Cookies and Tracking Technologies",
+        content: `Our website uses cookies and similar technologies to:
+        • Improve website functionality and user experience
+        • Analyze website traffic and usage patterns
+        • Remember your preferences and settings
+        • Provide personalized content and advertisements
+        
+        You can control cookie settings through your browser preferences.`,
+      },
+      {
+        title: "7. Third-Party Services",
+        content: `We may use third-party services such as:
+        • Google Analytics for website analytics
+        • Email marketing platforms for communications
+        • Appointment scheduling software
+        • Payment processing services
+        
+        These services have their own privacy policies and we encourage you to review them.`,
+      },
+      {
+        title: "8. Children's Privacy",
+        content: `Our services are not directed to children under 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.`,
+      },
+      {
+        title: "9. Changes to This Privacy Policy",
+        content: `We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically.`,
+      },
+      {
+        title: "10. Contact Us",
+        content: `If you have any questions about this Privacy Policy, please contact us:
+        
+        Luminous Dental LV
+        1212 S Maryland Pkwy
+        Las Vegas, NV 89104
+        Phone: (725) 291-5588
+        Email: info@luminousdentallv.com`,
+      },
+    ],
+    // --- TERMS OF SERVICE PAGE TRANSLATIONS ---
+    termsTitle: "Terms of Service",
+    termsLastUpdated: "Last Updated: January 15, 2025",
+    termsSections: [
+      {
+        title: "1. Acceptance of Terms",
+        content: `By accessing or using our services, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree with these terms, please do not use our services.`,
+      },
+      {
+        title: "2. Changes to Terms",
+        content: `We may update these Terms of Service from time to time. We will notify you of any changes by posting the new Terms on this page and updating the "Last Updated" date. Your continued use of our services after any changes indicates your acceptance of the new terms.`,
+      },
+      {
+        title: "3. Service Description",
+        content: `Luminous Dental LV provides cosmetic dental services, including but not limited to veneer placement, teeth whitening, and smile makeovers. We strive to provide accurate descriptions and representations of our services, but we do not guarantee specific results.`,
+      },
+      {
+        title: "4. Appointment Scheduling and Cancellations",
+        content: `Appointments can be scheduled through our website or by contacting our office. We require at least 24 hours notice for cancellations or rescheduling. Failure to provide adequate notice may result in a cancellation fee.`,
+      },
+      {
+        title: "5. Payment and Fees",
+        content: `We offer various payment options, including financing plans, to make our services affordable. Full payment or a payment plan agreement is required before the start of any treatment. Additional fees may apply for missed appointments or late cancellations.`,
+      },
+      {
+        title: "6. Patient Responsibilities",
+        content: `Patients are responsible for providing accurate information about their dental health and treatment preferences. It is also the patient's responsibility to follow post-treatment care instructions and attend follow-up appointments as recommended.`,
+      },
+      {
+        title: "7. Limitation of Liability",
+        content: `Luminous Dental LV is not liable for any indirect, incidental, or consequential damages arising from the use or inability to use our services. Our total liability to you for any claims arising from our services is limited to the amount paid by you for the specific service in question.`,
+      },
+      {
+        title: "8. Governing Law",
+        content: `These Terms of Service are governed by the laws of the State of Nevada, without regard to its conflict of law principles. Any disputes arising from these terms or our services will be resolved in the state or federal courts located in Clark County, Nevada.`,
+      },
+      {
+        title: "9. Contact Information",
+        content: `If you have any questions about these Terms of Service, please contact us:
+        
+        Luminous Dental LV
+        1212 S Maryland Pkwy
+        Las Vegas, NV 89104
+        Phone: (725) 291-5588
+        Email: info@luminousdentallv.com`,
+      },
+    ],
   },
   es: {
     // Header
@@ -391,6 +535,150 @@ const translations = {
     ],
     thankYouCtaTitle: "¿Listo para dar el siguiente paso?",
     thankYouCtaSubtitle: "Mientras espera nuestra llamada, explore más sobre nuestros servicios o programe consultas adicionales",
+    // --- PRIVACY POLICY PAGE TRANSLATIONS ---
+    privacyTitle: "Política de Privacidad",
+    privacyLastUpdated: "Última Actualización: 15 de Enero, 2025",
+    privacySections: [
+      {
+        title: "1. Información que Recopilamos",
+        content: `Recopilamos información que nos proporciona directamente, como cuando:
+        • Completa nuestro formulario de solicitud de consulta
+        • Se comunica con nosotros por teléfono o correo electrónico
+        • Visita nuestra clínica
+        • Se suscribe a nuestro boletín
+        
+        Los tipos de información que podemos recopilar incluyen:
+        • Nombre e información de contacto (dirección de correo electrónico, número de teléfono)
+        • Información de salud dental y preferencias de tratamiento
+        • Información de programación de citas
+        • Preferencias de comunicación`,
+      },
+      {
+        title: "2. Cómo Usamos Su Información",
+        content: `Usamos la información que recopilamos para:
+        • Programar y gestionar sus citas dentales
+        • Proporcionar atención dental y servicios de tratamiento
+        • Comunicarnos con usted sobre su tratamiento
+        • Enviar recordatorios de citas e instrucciones de cuidado posterior
+        • Mejorar nuestros servicios y experiencia del paciente
+        • Cumplir con requisitos legales y regulatorios
+        • Enviar comunicaciones de marketing (con su consentimiento)`,
+      },
+      {
+        title: "3. Compartir y Divulgación de Información",
+        content: `No vendemos, intercambiamos o transferimos su información personal a terceros excepto:
+        • Con su consentimiento explícito
+        • A laboratorios dentales para fines de tratamiento
+        • A compañías de seguros para facturación y procesamiento de reclamos
+        • Para cumplir con obligaciones legales
+        • Para proteger nuestros derechos y seguridad
+        • En conexión con una transferencia comercial o fusión`,
+      },
+      {
+        title: "4. Seguridad de Datos",
+        content: `Implementamos medidas de seguridad apropiadas para proteger su información personal:
+        • Transmisión segura de datos usando encriptación SSL
+        • Acceso limitado a información personal según necesidad
+        • Evaluaciones y actualizaciones regulares de seguridad
+        • Almacenamiento seguro de registros físicos y electrónicos
+        • Capacitación del personal en protocolos de privacidad y seguridad`,
+      },
+      {
+        title: "5. Sus Derechos y Opciones",
+        content: `Usted tiene derecho a:
+        • Acceder a su información personal
+        • Solicitar correcciones a información inexacta
+        • Solicitar eliminación de su información (sujeto a requisitos legales)
+        • Optar por no recibir comunicaciones de marketing
+        • Solicitar una copia de sus registros dentales
+        • Presentar una queja ante autoridades regulatorias`,
+      },
+      {
+        title: "6. Cookies y Tecnologías de Seguimiento",
+        content: `Nuestro sitio web utiliza cookies y tecnologías similares para:
+        • Mejorar la funcionalidad del sitio web y la experiencia del usuario
+        • Analizar el tráfico y patrones de uso del sitio web
+        • Recordar sus preferencias y configuraciones
+        • Proporcionar contenido personalizado y anuncios
+        
+        Puede controlar la configuración de cookies a través de las preferencias de su navegador.`,
+      },
+      {
+        title: "7. Servicios de Terceros",
+        content: `Podemos usar servicios de terceros como:
+        • Google Analytics para análisis del sitio web
+        • Plataformas de marketing por correo electrónico para comunicaciones
+        • Software de programación de citas
+        • Servicios de procesamiento de pagos
+        
+        Estos servicios tienen sus propias políticas de privacidad y le recomendamos revisarlas.`,
+      },
+      {
+        title: "8. Privacidad de Menores",
+        content: `Nuestros servicios no están dirigidos a menores de 13 años. No recopilamos conscientemente información personal de menores de 13 años. Si nos enteramos de que hemos recopilado información personal de un menor de 13 años, tomaremos medidas para eliminar dicha información.`,
+      },
+      {
+        title: "9. Cambios a Esta Política de Privacidad",
+        content: `Podemos actualizar esta Política de Privacidad de vez en cuando. Le notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de "Última Actualización". Le recomendamos revisar esta Política de Privacidad periódicamente.`,
+      },
+      {
+        title: "10. Contáctenos",
+        content: `Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos:
+        
+        Luminous Dental LV
+        1212 S Maryland Pkwy
+        Las Vegas, NV 89104
+        Teléfono: (725) 291-5588
+        Correo: info@luminousdentallv.com`,
+      },
+    ],
+    // --- TERMS OF SERVICE PAGE TRANSLATIONS ---
+    termsTitle: "Términos de Servicio",
+    termsLastUpdated: "Última Actualización: 15 de Enero, 2025",
+    termsSections: [
+      {
+        title: "1. Aceptación de Términos",
+        content: `Al acceder o utilizar nuestros servicios, usted acepta estar sujeto a estos Términos de Servicio y nuestra Política de Privacidad. Si no está de acuerdo con estos términos, no utilice nuestros servicios.`,
+      },
+      {
+        title: "2. Cambios a los Términos",
+        content: `Podemos actualizar estos Términos de Servicio de vez en cuando. Le notificaremos sobre cualquier cambio publicando los Nuevos Términos en esta página y actualizando la fecha de "Última Actualización". Su uso continuado de nuestros servicios después de cualquier cambio indica su aceptación de los nuevos términos.`,
+      },
+      {
+        title: "3. Descripción del Servicio",
+        content: `Luminous Dental LV proporciona servicios dentales cosméticos, incluyendo pero no limitado a colocación de carillas, blanqueamiento dental y transformaciones de sonrisa. Nos esforzamos por proporcionar descripciones y representaciones precisas de nuestros servicios, pero no garantizamos resultados específicos.`,
+      },
+      {
+        title: "4. Programación y Cancelaciones de Citas",
+        content: `Las citas se pueden programar a través de nuestro sitio web o contactando a nuestra oficina. Requerimos al menos 24 horas de aviso para cancelaciones o reprogramaciones. La falta de aviso adecuado puede resultar en una tarifa de cancelación.`,
+      },
+      {
+        title: "5. Pago y Tarifas",
+        content: `Ofrecemos varias opciones de pago, incluyendo planes de financiamiento, para hacer nuestros servicios asequibles. Se requiere el pago completo o un acuerdo de plan de pago antes del inicio de cualquier tratamiento. Pueden aplicarse tarifas adicionales por citas perdidas o cancelaciones tardías.`,
+      },
+      {
+        title: "6. Responsabilidades del Paciente",
+        content: `Los pacientes son responsables de proporcionar información precisa sobre su salud dental y preferencias de tratamiento. También es responsabilidad del paciente seguir las instrucciones de cuidado posterior al tratamiento y asistir a las citas de seguimiento según lo recomendado.`,
+      },
+      {
+        title: "7. Limitación de Responsabilidad",
+        content: `Luminous Dental LV no es responsable de ningún daño indirecto, incidental o consecuente que surja del uso o la imposibilidad de usar nuestros servicios. Nuestra responsabilidad total hacia usted por cualquier reclamación que surja de nuestros servicios se limita a la cantidad pagada por usted por el servicio específico en cuestión.`,
+      },
+      {
+        title: "8. Ley Aplicable",
+        content: `Estos Términos de Servicio se rigen por las leyes del Estado de Nevada, sin tener en cuenta sus principios de conflicto de leyes. Cualquier disputa que surja de estos términos o nuestros servicios se resolverá en los tribunales estatales o federales ubicados en el Condado de Clark, Nevada.`,
+      },
+      {
+        title: "9. Información de Contacto",
+        content: `Si tiene alguna pregunta sobre estos Términos de Servicio, contáctenos:
+        
+        Luminous Dental LV
+        1212 S Maryland Pkwy
+        Las Vegas, NV 89104
+        Teléfono: (725) 291-5588
+        Correo: info@luminousdentallv.com`,
+      },
+    ],
   },
 };
 
@@ -409,7 +697,27 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<"en" | "es">("en");
+  const [language, setLanguageState] = useState<"en" | "es">("en");
+
+  // Leer idioma de localStorage al montar
+  useEffect(() => {
+    const storedLang = typeof window !== "undefined" ? localStorage.getItem("luminous-lang") : null;
+    if (storedLang === "en" || storedLang === "es") {
+      setLanguageState(storedLang);
+    }
+  }, []);
+
+  // Guardar idioma en localStorage cuando cambie
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("luminous-lang", language);
+    }
+  }, [language]);
+
+  const setLanguage = (lang: "en" | "es") => {
+    setLanguageState(lang);
+  };
+
   const t = translations[language];
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
