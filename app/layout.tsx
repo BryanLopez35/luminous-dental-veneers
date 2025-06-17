@@ -75,6 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="canonical" href="https://veneers.luminousdentallv.com" />
         <link
           rel="alternate"
@@ -122,6 +123,10 @@ export default function RootLayout({
                 "@type": "AggregateRating",
                 ratingValue: "4.9",
                 reviewCount: "127",
+                itemReviewed: {
+                  "@type": "LocalBusiness",
+                  name: "Luminous Dental Las Vegas"
+                }
               },
               medicalSpecialty: "Cosmetic Dentistry",
               availableService: [
