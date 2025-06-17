@@ -125,7 +125,18 @@ export default function RootLayout({
                 reviewCount: "127",
                 itemReviewed: {
                   "@type": "LocalBusiness",
-                  name: "Luminous Dental Las Vegas"
+                  name: "Luminous Dental Las Vegas",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "1212 S Maryland Pkwy",
+                    addressLocality: "Las Vegas",
+                    addressRegion: "NV",
+                    postalCode: "89104",
+                    addressCountry: "US"
+                  },
+                  telephone: "(725) 291-5588",
+                  priceRange: "$$",
+                  image: "https://veneers.luminousdentallv.com/logo.png"
                 }
               },
               medicalSpecialty: "Cosmetic Dentistry",
