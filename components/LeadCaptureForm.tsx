@@ -71,7 +71,7 @@ const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ t, isSubmitting, setI
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email" className="block text-sm font-semibold text-gray-700">{t.emailAddress} *</label>
-                      <Input id="email" name="email" type="email" required placeholder="your.email@example.com" className="w-full h-12 border-2 border-gray-200 focus:border-blue-500 rounded-lg" disabled={isSubmitting} />
+                      <Input id="email" name="email" type="email" required placeholder={t.emailAddressPlaceholder} className="w-full h-12 border-2 border-gray-200 focus:border-blue-500 rounded-lg" disabled={isSubmitting} />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="preferred-time" className="block text-sm font-semibold text-gray-700">{t.preferredTime}</label>

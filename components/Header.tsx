@@ -5,8 +5,7 @@ import { Phone } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import usaFlag from "public/usa-flag.svg";
-import mexicoFlag from "public/mexico-flag.svg";
+
 
 const Header: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -17,7 +16,14 @@ const Header: React.FC = () => {
     if (pathname === "/") {
       const el = document.getElementById("consultation-form");
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+        const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerHeight - 1; // Ajuste adicional de 20px
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
       }
     } else {
       router.push("/#consultation-form");
