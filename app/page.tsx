@@ -2,7 +2,7 @@
 
 import type React from "react";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import FeaturesStrip from "@/components/FeaturesStrip";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -20,7 +20,13 @@ export default function VeneersLandingPage() {
   const scrollToForm = () => {
     const formElement = document.getElementById("consultation-form");
     if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth" });
+      const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+      const elementPosition = formElement.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerHeight - 1; // Ajuste adicional
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
