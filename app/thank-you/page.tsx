@@ -20,7 +20,9 @@ import {
   Shield,
   Gift,
   Download,
+  Smile,
   Share2,
+  Sparkle
 } from "lucide-react"
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
@@ -68,10 +70,8 @@ export default function ThankYouPage() {
               {customerName ? `${t.thankYouTitle} ${customerName}!` : t.thankYouTitle}
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">{t.thankYouSubtitle}</p>
-
             <Badge className="bg-green-100 text-green-800 hover:bg-green-100 px-6 py-3 text-lg font-semibold">
-              <Gift className="w-5 h-5 mr-2" />
+              <Sparkle className="w-5 h-5 mr-2" />
               {t.thankYouSocialProof}
             </Badge>
           </div>
@@ -115,7 +115,7 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      {/* Special Offer Section */}
+      {/* Special Offer Section 
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -142,9 +142,9 @@ export default function ThankYouPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
-      {/* What Happens Next */}
+      {/* What Happens Next 
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -190,9 +190,9 @@ export default function ThankYouPage() {
             })}
           </div>
         </div>
-      </section>
+      </section>*/}
 
-      {/* Contact Section */}
+      {/* Contact Section 
       <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -252,9 +252,9 @@ export default function ThankYouPage() {
             </Card>
           </div>
         </div>
-      </section>
+      </section>*/}
 
-      {/* Social Proof & Testimonial */}
+      {/* Social Proof & Testimonial
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -309,9 +309,9 @@ export default function ThankYouPage() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Guarantee Section */}
+      {/* Guarantee Section
       <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -358,7 +358,7 @@ export default function ThankYouPage() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
@@ -374,7 +374,7 @@ export default function ThankYouPage() {
               size="lg"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
-              <Link href="/">
+              <Link href="https://luminousdentallv.com/">
                 <ArrowRight className="w-5 h-5 mr-2" />
                 {t.thankYouBackToHome}
               </Link>

@@ -10,7 +10,8 @@ const translations = {
     topDentist: "#1 Cosmetic Dentist in Las Vegas",
     heroTitle: "Veneers in Las Vegas That Transform Your Smile",
     heroSubtitle:
-      "Get the confident, radiant smile you deserve from our expert cosmetic dentists. Custom porcelain veneers designed to give you natural-looking, beautiful results.",
+      "Get the confident, radiant smile you deserve from our expert cosmetic dentists. Next-generation ceramic and porcelain veneers.",
+      
     scheduleConsultation: "Schedule Your Free Consultation",
     rating: "4.9/5 Rating",
     happyPatients: "500+ Happy Patients",
@@ -18,16 +19,16 @@ const translations = {
     whyChooseUsBadge:"Why Choose Us",
     whyChooseTitle: "Why Choose Luminous Dental LV for Your Veneers?",
     whyChooseSubtitle:
-      "We're the trusted choice for dental veneers in Las Vegas, combining expertise with personalized care.",
+      "We're the trusted choice for dental veneers in Las Vegas, combining experience and technology with personalized care.",
     experiencedDentists: "Experienced Cosmetic Dentists",
     experiencedDesc:
-      "Over 15 years of experience in cosmetic dentistry and veneer placement in Las Vegas.",
+      "Over 15 years of experience in cosmetic dentistry, creating the most beautiful smiles in the world.",
     affordablePlans: "Affordable Payment Plans",
     affordableDesc:
-      "Flexible financing options to make your dream smile affordable with monthly payment plans.",
+      "Flexible financing options to make your dream smile a reality.",
     naturalResults: "Natural-Looking Results",
     naturalDesc:
-      "Custom-crafted porcelain veneers that blend seamlessly with your natural teeth.",
+      "Custom-made porcelain veneers that create a perfect smile for your face. They also help define and refine your facial features.",
     convenientLocation: "Convenient Las Vegas Location",
     locationDesc:
       "Centrally located on Maryland Parkway, easily accessible from anywhere in Las Vegas.",
@@ -57,8 +58,6 @@ const translations = {
     afternoon: "Afternoon (12PM - 5PM)",
     evening: "Evening (5PM - 7PM)",
     scheduleButton: "Schedule My Free Consultation",
-    contactNote:
-      "We'll contact you within 24 hours. Your information is secure and confidential.",
     submitting: "Submitting...",
     submitted: "Request Submitted Successfully!",
     submittedMessage:
@@ -101,22 +100,21 @@ const translations = {
       {
         title: "Advanced Technology",
         description:
-          "State-of-the-art equipment for precise, comfortable treatments",
+          "Cutting-edge equipment for highly aesthetic and precise treatments",
       },
       {
-        title: "Lifetime Warranty",
+        title: "Satisfaction Guarantee",
         description:
-          "We stand behind our work with comprehensive warranty coverage",
+          "We guarantee you'll get your dream smile by the end of your treatment",
       },
       {
         title: "Pain-Free Process",
         description:
-          "Comfortable, minimally invasive procedures with sedation options",
+          "Comfortable, minimally invasive procedures with personalized care from empathetic specialists",
       },
     ],
     // --- THANK YOU PAGE TRANSLATIONS ---
     thankYouTitle: "Thank You!",
-    thankYouSubtitle: "Your consultation request has been received",
     thankYouConfirmationTitle: "🎉 Consultation Request Confirmed!",
     thankYouConfirmationMessage:
       "We've received your request for a free veneer consultation and we're excited to help you achieve your dream smile!",
@@ -172,7 +170,7 @@ const translations = {
       "Convenient Las Vegas location",
       "Comprehensive warranty coverage",
     ],
-    thankYouBackToHome: "Back to Home",
+    thankYouBackToHome: "Explore Our Services",
     thankYouScheduleAnother: "Schedule Another Consultation",
     thankYouShareExperience: "Share Your Experience",
     thankYouFollowUs: "Follow us on social media for smile tips and updates",
@@ -192,7 +190,7 @@ const translations = {
     ],
     thankYouDownloadGuide: "Download Free Smile Guide",
     thankYouShareWithFriends: "Share with Friends",
-    thankYouSocialProof: "Trusted by 500+ Las Vegas residents",
+    thankYouSocialProof: "Welcome, you’re very close to making your smile shine",
     thankYouGuaranteeTitle: "Our Promise to You",
     thankYouGuaranteeItems: [
       "100% satisfaction guarantee",
@@ -354,7 +352,7 @@ const translations = {
     topDentist: "#1 Dentista Cosmético en Las Vegas",
     heroTitle: "Carillas en Las Vegas Que Transforman Tu Sonrisa",
     heroSubtitle:
-      "Obtén la sonrisa confiada y radiante que mereces de nuestros dentistas cosméticos expertos. Carillas de porcelana personalizadas diseñadas para darte resultados hermosos y de aspecto natural.",
+      "Obtén la sonrisa confiada y radiante que mereces de nuestros dentistas cosméticos expertos. Carillas de ceramica y porcelana de última generación.",
     scheduleConsultation: "Programa Tu Consulta Gratuita",
     rating: "Calificación 4.9/5",
     happyPatients: "500+ Pacientes Felices",
@@ -362,16 +360,16 @@ const translations = {
     whyChooseUsBadge: "¿Por Qué Elegirnos?",
     whyChooseTitle: "¿Por Qué Elegir Luminous Dental LV para Tus Carillas?",
     whyChooseSubtitle:
-      "Somos la opción de confianza para carillas dentales en Las Vegas, combinando experiencia con atención personalizada.",
+      "Somos la opción de confianza para carillas dentales en Las Vegas, combinando experiencia y tecnologia con atención personalizada.",
     experiencedDentists: "Dentistas Cosméticos Experimentados",
     experiencedDesc:
-      "Más de 15 años de experiencia en odontología cosmética y colocación de carillas en Las Vegas.",
+      "Más de 15 años de experiencia en odontología cosmética, creando las sonrisas más hermosas del mundo.",
     affordablePlans: "Planes de Pago Accesibles",
     affordableDesc:
-      "Opciones de financiamiento flexibles para hacer tu sonrisa soñada accesible con planes de pago mensual.",
+      "Opciones de financiamiento flexibles para hacer realidad la sonrisa de tus sueños.",
     naturalResults: "Resultados de Aspecto Natural",
     naturalDesc:
-      "Carillas de porcelana hechas a medida que se mezclan perfectamente con tus dientes naturales.",
+      "Carillas de porcelana hechas a tu medida que crean una sonrisa perfecta para tu rostro. También ayudan a definir y afinar tus rasgos faciales.",
     convenientLocation: "Ubicación Conveniente en Las Vegas",
     locationDesc:
       "Ubicado centralmente en Maryland Parkway, fácilmente accesible desde cualquier lugar de Las Vegas.",
@@ -401,8 +399,6 @@ const translations = {
     afternoon: "Tarde (12PM - 5PM)",
     evening: "Noche (5PM - 7PM)",
     scheduleButton: "Programar Mi Consulta Gratuita",
-    contactNote:
-      "Te contactaremos dentro de 24 horas. Tu información es segura y confidencial.",
     submitting: "Enviando...",
     submitted: "¡Solicitud Enviada Exitosamente!",
     submittedMessage:
@@ -445,22 +441,21 @@ const translations = {
       {
         title: "Tecnología Avanzada",
         description:
-          "Equipos de última generación para tratamientos precisos y cómodos",
+          "Equipos de última generación para tratamientos de alta estética y precisión",
       },
       {
-        title: "Garantía de por Vida",
+        title: "Garantía de Satisfacción",
         description:
-          "Respaldamos nuestro trabajo con cobertura de garantía integral",
+          "Garantizamos que obtendras tu sonrisa de  ensueño al termino de tu tratamiento",
       },
       {
         title: "Proceso Sin Dolor",
         description:
-          "Procedimientos cómodos y mínimamente invasivos con opciones de sedación",
+          "Procedimientos cómodos, mínimamente invasivos y atención personalizada de especialistas empáticos",
       },
     ],
     // --- TRADUCCIONES PÁGINA DE AGRADECIMIENTO (ESPAÑOL) ---
     thankYouTitle: "¡Gracias!",
-    thankYouSubtitle: "Hemos recibido su solicitud de consulta",
     thankYouConfirmationTitle: "🎉 ¡Solicitud de Consulta Confirmada!",
     thankYouConfirmationMessage:
       "¡Hemos recibido su solicitud de consulta gratuita de carillas y estamos emocionados de ayudarle a lograr la sonrisa de sus sueños!",
@@ -516,7 +511,7 @@ const translations = {
       "Ubicación conveniente en Las Vegas",
       "Cobertura integral de garantía",
     ],
-    thankYouBackToHome: "Volver al Inicio",
+    thankYouBackToHome: "Explora nuestros servicios",
     thankYouScheduleAnother: "Programar Otra Consulta",
     thankYouShareExperience: "Comparta Su Experiencia",
     thankYouFollowUs: "Síganos en redes sociales para consejos de sonrisa y actualizaciones",
@@ -536,7 +531,7 @@ const translations = {
     ],
     thankYouDownloadGuide: "Descargar Guía Gratuita de Sonrisa",
     thankYouShareWithFriends: "Compartir con Amigos",
-    thankYouSocialProof: "Confiado por 500+ residentes de Las Vegas",
+    thankYouSocialProof: "Bienvenido, estás muy cerca de hacer brillar tu sonrisa",
     thankYouGuaranteeTitle: "Nuestra Promesa Para Usted",
     thankYouGuaranteeItems: [
       "Garantía de satisfacción 100%",

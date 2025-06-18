@@ -250,7 +250,7 @@ export async function POST(request: NextRequest) {
     try {
       await transporter.sendMail({
         from: `"Luminous Dental LV" <${process.env.HOSTINGER_EMAIL}>`,
-        to: "bryan.lopezhdz97@gmail.com",
+        to: "info@luminousdentallv.com",
         subject: `New Veneer Consultation Request - ${name}`,
         html: businessEmailHtml,
         text: `New consultation request from ${name} (${email}, ${cleanPhone}). Preferred time: ${preferredTime || "Not specified"}`,

@@ -97,11 +97,6 @@ const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ t, isSubmitting, setI
                         </>
                       )}
                     </Button>
-                    <div className="text-center">
-                      <p className="text-sm text-gray-600 bg-blue-50 p-4 rounded-lg border border-blue-200">
-                        <strong className="text-blue-700">{t.contactNote}</strong>
-                      </p>
-                    </div>
                   </form>
                 </>
               ) : (
