@@ -14,7 +14,7 @@ const translations = {
       
     scheduleConsultation: "Schedule Your Free Consultation",
     rating: "4.9/5 Rating",
-    happyPatients: "500+ Happy Patients",
+    happyPatients: "1000+ Happy Patients",
     // Why Choose Us
     whyChooseUsBadge:"Why Choose Us",
     whyChooseTitle: "Why Choose Luminous Dental LV for Your Veneers?",
@@ -179,7 +179,7 @@ const translations = {
       "This place is amazing! They are very professional and they are very patient! Highly recommend!",
     thankYouTestimonialAuthor: "Saul Mendoza, Las Vegas",
     thankYouRating: "4.9/5 Rating",
-    thankYouHappyPatients: "500+ Happy Patients",
+    thankYouHappyPatients: "1000+ Happy Patients",
     thankYouSpecialOffer: "🎁 Special Consultation Bonus",
     thankYouOfferTitle: "Exclusive Benefits for New Patients",
     thankYouOfferItems: [
@@ -355,7 +355,7 @@ const translations = {
       "Obtén la sonrisa confiada y radiante que mereces de nuestros dentistas cosméticos expertos. Carillas de ceramica y porcelana de última generación.",
     scheduleConsultation: "Programa Tu Consulta Gratuita",
     rating: "Calificación 4.9/5",
-    happyPatients: "500+ Pacientes Felices",
+    happyPatients: "1000+ Pacientes Felices",
     // Why Choose Us
     whyChooseUsBadge: "¿Por Qué Elegirnos?",
     whyChooseTitle: "¿Por Qué Elegir Luminous Dental LV para Tus Carillas?",
@@ -515,12 +515,12 @@ const translations = {
     thankYouScheduleAnother: "Programar Otra Consulta",
     thankYouShareExperience: "Comparta Su Experiencia",
     thankYouFollowUs: "Síganos en redes sociales para consejos de sonrisa y actualizaciones",
-    thankYouTestimonialTitle: "Únase a 500+ Pacientes Felices",
+    thankYouTestimonialTitle: "Únase a 1000+ Pacientes Felices",
     thankYouTestimonialText:
       "Este lugar es increíble! Son muy profesionales y son muy pacientes! ¡Lo recomiendo!",
     thankYouTestimonialAuthor: "Saul Mendoza, Las Vegas",
     thankYouRating: "Calificación 4.9/5",
-    thankYouHappyPatients: "500+ Pacientes Felices",
+    thankYouHappyPatients: "1000+ Pacientes Felices",
     thankYouSpecialOffer: "🎁 Bono Especial de Consulta",
     thankYouOfferTitle: "Beneficios Exclusivos para Nuevos Pacientes",
     thankYouOfferItems: [
